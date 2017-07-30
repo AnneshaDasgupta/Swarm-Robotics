@@ -1,0 +1,2 @@
+# Swarm-Robotics
+Swarm Robotics deals with the Artificial Swarm Intelligence and involves the usage of multiple Robots which coordinate among themselves to complete a mission. The Swarm robots communicate with each other wirelessly and take decisions. This project involves development of autonomous swarm robots enabled with master-slave communication. The master robot controls the slave robot while performing its own task and the slave robot functions based on the signal received from the master robot (both being autonomous).
