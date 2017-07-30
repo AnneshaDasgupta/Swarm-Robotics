@@ -1,0 +1,62 @@
+C51 COMPILER V9.56.0.0   SLAVE_ROBOT                                                       07/25/2017 22:33:59 PAGE 1   
+
+
+C51 COMPILER V9.56.0.0, COMPILATION OF MODULE SLAVE_ROBOT
+OBJECT MODULE PLACED IN .\Objects\slave robot.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE slave robot.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listin
+                    -gs\slave robot.lst) TABS(2) OBJECT(.\Objects\slave robot.obj)
+
+line level    source
+
+   1          #include <reg52.h>
+   2          #include <stdio.h>
+   3          #define lt 0x06;
+   4          #define rt 0x09;
+   5          #define st 0x0a;
+   6          #define stop 0x00;
+   7          
+   8          #define rev 0x05;
+   9          unsigned int a;
+  10          
+  11          void main()
+  12          {
+  13   1        while(1)
+  14   1        {
+  15   2          a=P0&0x0f;
+  16   2          if(a==0x06)
+  17   2          {
+  18   3            P2=lt;
+  19   3          }
+  20   2          if(a==0x09)
+  21   2          {
+  22   3            P2=rt;
+  23   3          }
+  24   2          
+  25   2          if(a==0x0a)
+  26   2          {
+  27   3            P2=st;
+  28   3          }
+  29   2          if(a==0x05)
+  30   2          {
+  31   3            P2=rev;
+  32   3          }
+  33   2          if(a==0x0f)
+  34   2          {
+  35   3            P2=stop;
+  36   3          }
+  37   2        }
+  38   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     63    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      2    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

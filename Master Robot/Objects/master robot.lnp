@@ -1,0 +1,5 @@
+".\Objects\STARTUP.obj",
+".\Objects\master robot.obj" 
+TO ".\Objects\master robot" 
+PRINT(".\Listings\master robot.m51") RAMSIZE(256) 
+CODE( 0X0000-0X1FFF )
